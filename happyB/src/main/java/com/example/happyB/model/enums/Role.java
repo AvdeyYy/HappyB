@@ -1,4 +1,4 @@
-package com.example.happyB.DBmodel.eNums;
+package com.example.happyB.model.enums;
 
 import org.springframework.security.core.GrantedAuthority;
 

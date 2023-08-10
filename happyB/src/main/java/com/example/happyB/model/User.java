@@ -1,12 +1,14 @@
-package com.example.happyB.DBmodel;
+package com.example.happyB.model;
 
-import com.example.happyB.DBmodel.eNums.Role;
+import com.example.happyB.model.enums.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -23,9 +25,10 @@ public class User implements UserDetails {
     @Column(name = "password")
 
     private String password;
-//    @Column(name = "matchingPassword")
-//
-//    private String matchingPassword;
+    @Column(name = "activationCode")
+    private String activationCode;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    private List<Employee> employees = new ArrayList<>();
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))

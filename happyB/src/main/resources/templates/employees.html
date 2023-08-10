@@ -1,0 +1,34 @@
+    <!DOCTYPE HTML>
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+</head>
+<body>
+<header th:insert="defolt/header :: header"></header>
+<h1>Список</h1>
+<form th:action="@{/employee/add}" method="post">
+    <div>
+        <input type="text" name="smpId" placeholder="smpId"/>
+    </div>
+    <div>
+        <input type="text" name="departmentId" placeholder="departmentId"/>
+    </div>
+    <input type="submit" value="add employee"/>
+</form>
+<!--    <h4 class="form-signin-heading">Добавить напоминание о ДР</h4>-->
+<!--    <h5 class="form-signin-heading">Заполните одно или оба поля</h5>-->
+<!--    &lt;!&ndash; Display error message &ndash;&gt;-->
+<!--    <div th:if="${errorMessage}" class="alert alert-danger" role="alert">-->
+<!--        <p th:text="${errorMessage}"></p>-->
+<!--    </div>-->
+<!--    <form action="/employee" method="post">-->
+<!--        <input type="text" name="smpId" placeholder="Введите smpID коллеги" class="form-control">-->
+<!--        <p1 class="form-signin-heading">Это позволит добавить конкретного сотрдуника</p1>-->
+<!--        <input type="text" name="departmentId" placeholder="Введите smpID подразделения" class="form-control mt-3">-->
+<!--        <p1 class="form-signin-heading">Это позволит добавить сотрудников из всего подразделения</p1>-->
+<!--        <h6><a class="my-0 mr-md-auto font-weight-normal mt-1" href="/home"> Как узнать smpID сотрудника или отдела? </a></h6>-->
+<!--        <button type="submit" class="btn btn-success">Save employee</button>-->
+<!--        </form>-->
+<!--</div>-->
+</body>
+</html>

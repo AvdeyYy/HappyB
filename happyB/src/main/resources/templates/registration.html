@@ -5,7 +5,6 @@
 </head>
 <body>
 <h1>Sign up</h1>
-
 <form th:action="@{/registration}" method="post">
     <div>
         <input type="email" name="email" placeholder="Email"/>
@@ -18,5 +17,7 @@
     </div>
     <input type="submit" value="Log up" />
 </form>
+<a th:href="@{/login}">Войти</a>
+
 </body>
 </html>
